@@ -1,0 +1,77 @@
+body {
+    background-color: beige;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+}
+h1 {
+    color: black;
+    font-size: 2.5rem;
+}
+header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid aliceblue;
+}
+nav a {
+    color: black;
+}
+main {
+    padding: 3rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.metodo-titulo {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+    color: black;
+}
+.precio {
+    font-weight: bold;
+    color: black;
+}
+footer {
+    padding: 2rem 3rem;
+    color: black;
+}
+#reservas {
+    color: black;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#contador-tazas {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+}
+
+#boton-reservar {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.25rem;
+    background-color: brown;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.notificacion.oculto {
+    opacity: 0;
+    pointer-events: none; /* Para que no estorbe cuando esté invisible */
+}

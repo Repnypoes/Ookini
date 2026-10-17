@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okini - Café del barrio</title>
+    
+    <!-- Fuentes elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        mint: {
+                            50: '#f0fcf7',
+                            100: '#dcf7ec',
+                            200: '#beeadd',
+                            300: '#94d8c5',
+                            400: '#64c0a8',
+                            500: '#42a38c',
+                            600: '#308371',
+                            700: '#286a5d',
+                            800: '#23554c',
+                            900: '#1f4640',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #fafafa;
+            color: #1f2937;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-sans">
+
+    <!-- Navegación -->
+    <nav class="p-6 flex justify-center items-center bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-mint-50">
+        <h1 class="font-serif text-3xl tracking-widest font-bold text-gray-900 uppercase">
+            Okini
+        </h1>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-mint-900 text-mint-50 py-24 px-6 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-mint-300 via-mint-900 to-gray-900"></div>
+        <div class="relative max-w-2xl mx-auto space-y-6 z-10">
+            <h2 class="text-4xl md:text-5xl font-serif mb-4 leading-tight">El arte de la pausa.</h2>
+            <p class="text-lg md:text-xl text-mint-100/90 font-light">
+                Café de especialidad, métodos precisos y tiempo para disfrutar.
+            </p>
+            <div class="inline-flex items-center gap-2 bg-mint-800/50 backdrop-blur-sm px-6 py-3 rounded-full border border-mint-700 mt-6 shadow-sm">
+                <!-- Icono de reloj -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-mint-300"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span class="font-medium tracking-wide">Abierto todos los días de 8:00 AM a 8:00 PM</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-5xl mx-auto px-6 py-16 space-y-24 w-full">
+        
+        <!-- Walk-in Section -->
+        <section class="text-center space-y-6">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-mint-100 text-mint-700 mb-4 shadow-sm">
+                <!-- Icono de café -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="9" x2="9" y1="1" y2="4"/><line x1="15" x2="15" y1="1" y2="4"/></svg>
+            </div>
+            <h3 class="text-3xl font-serif text-gray-900">Menú Walk-in</h3>
+            <p class="text-gray-500 max-w-lg mx-auto">
+                Llega, siéntate y disfruta. Sin reservas. Disponible hasta el cierre.
+            </p>
+            
+            <div class="mt-8 p-8 border border-gray-100 rounded-3xl bg-white shadow-sm max-w-md mx-auto hover:shadow-md transition-shadow">
+                <div class="flex justify-between items-center border-b border-gray-100 pb-4 mb-4">
+                    <span class="text-xl font-medium">Prensa Francesa</span>
+                    <span class="text-xl text-mint-600 font-semibold">$3</span>
+                </div>
+                <p class="text-sm text-gray-500 text-left">
+                    Un clásico confiable. Cuerpo completo y sabores ricos, perfecto para acompañar tu lectura o charla.
+                </p>
+            </div>
+        </section>
+
+        <!-- Slow Bar Section -->
+        <section class="grid md:grid-cols-2 gap-12 items-start">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-serif text-gray-900">Slow Bar</h3>
+                <p class="text-gray-500 leading-relaxed">
+                    Dedicamos tiempo y precisión a cada taza. Para garantizar la máxima calidad, limitamos nuestra producción a <strong>50 tazas diarias</strong> en métodos de extracción lenta.
+                </p>
+                
+                <div class="bg-mint-50 p-6 rounded-3xl border border-mint-100">
+                    <div class="flex items-baseline justify-between mb-3">
+                        <span class="text-mint-900 font-medium">Disponibilidad de hoy:</span>
+                        <span class="text-3xl font-serif font-bold text-mint-700"><span id="slow-bar-count">50</span> <span class="text-lg text-mint-600 font-sans font-normal">/ 50</span></span>
+                    </div>
+                    <div class="w-full bg-mint-200/60 rounded-full h-3">
+                        <div id="slow-bar-progress" class="bg-mint-500 h-3 rounded-full transition-all duration-700 ease-out" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-8 rounded-3xl shadow-lg shadow-gray-100/50 border border-gray-100">
+                <h4 class="text-xl font-medium mb-6">Reserva tu método</h4>
+                
+                <form id="slow-bar-form" class="space-y-5">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Método de extracción</label>
+                        <div class="relative">
+                            <select id="slow-bar-method" class="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-700 py-3.5 px-4 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-mint-400 focus:border-transparent transition-all cursor-pointer">
+                                <option value="V60" data-price="5">V60 - $5</option>
+                                <option value="Kyoto Drip" data-price="7">Kyoto Drip - $7</option>
+                                <option value="Sifón" data-price="8">Sifón - $8</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Cantidad (Máx 2 por persona)</label>
+                        <div class="relative">
+                            <select id="slow-bar-qty" class="w-full appearance-none bg-gray-50 border border-gray-200 text-gray-700 py-3.5 px-4 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-mint-400 focus:border-transparent transition-all cursor-pointer">
+                                <option value="1">1 Taza</option>
+                                <option value="2">2 Tazas</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-between py-3 border-t border-gray-50">
+                        <span class="text-gray-500">Total a pagar en local:</span>
+                        <span class="text-2xl font-semibold text-mint-700" id="slow-bar-total">$5</span>
+                    </div>
+
+                    <button type="submit" id="slow-bar-submit" class="w-full bg-gray-900 hover:bg-gray-800 text-white font-medium py-4 px-4 rounded-xl transition-all shadow-md active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
+                        Reservar Slow Bar
+                    </button>
+
+                    <!-- Contenedor de mensajes -->
+                    <div id="slow-bar-message" class="hidden p-4 rounded-xl items-start gap-3 mt-4">
+                        <!-- El contenido se inyecta via JS -->
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tasting / Cupping Section -->
+        <section class="bg-gray-900 rounded-[2.5rem] p-8 md:p-12 text-white relative overflow-hidden shadow-xl shadow-mint-900/10">
+            <!-- Decorative element -->
+            <div class="absolute top-0 right-0 -mt-16 -mr-16 w-64 h-64 bg-mint-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 text-mint-300 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        <span class="text-sm font-medium tracking-wider uppercase">Experiencias</span>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-serif">Cata Semanal</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">
+                        Descubre los perfiles de sabor, procesos y orígenes de nuestros granos en una sesión guiada exclusiva. Una experiencia íntima para conectar con el mundo del café.
+                    </p>
+                    
+                    <ul class="space-y-4 text-gray-300 bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <li class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-mint-400 rounded-full"></div>
+                            Valor: <strong class="text-white">$25 por persona</strong>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-mint-400 rounded-full"></div>
+                            Cupos estrictamente limitados
+                        </li>
+                        <li class="flex items-center gap-3 text-mint-200">
+                            <div class="w-2 h-2 bg-mint-400 rounded-full animate-pulse"></div>
+                            <strong><span id="cupping-count">8</span> lugares disponibles</strong> esta semana
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10">
+                    <h4 class="text-xl font-medium mb-6 text-white">Asegura tu lugar</h4>
+                    <form id="cupping-form" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-2">Cantidad de personas</label>
+                            <div class="relative">
+                                <select id="cupping-qty" class="w-full appearance-none bg-white/5 border border-white/20 text-white py-3.5 px-4 pr-8 rounded-xl focus:outline-none focus:ring-2 focus:ring-mint-400 transition-all cursor-pointer">
+                                    <option value="1" class="text-gray-900">1 Persona</option>
+                                    <option value="2" class="text-gray-900">2 Personas</option>
+                                    <option value="3" class="text-gray-900">3 Personas</option>
+                                    <option value="4" class="text-gray-900">4 Personas</option>
+                                    <option value="5" class="text-gray-900">5 Personas</option>
+                                    <option value="6" class="text-gray-900">6 Personas</option>
+                                    <option value="7" class="text-gray-900">7 Personas</option>
+                                    <option value="8" class="text-gray-900">8 Personas</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-mint-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between py-3 border-t border-white/10">
+                            <span class="text-gray-300">Total a pagar en local:</span>
+                            <span class="text-3xl font-semibold text-mint-300" id="cupping-total">$25</span>
+                        </div>
+
+                        <button type="submit" id="cupping-submit" class="w-full bg-mint-500 hover:bg-mint-400 text-mint-950 font-medium py-4 px-4 rounded-xl transition-all shadow-lg active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed">
+                            Reservar Cupo
+                        </button>
+
+                        <!-- Contenedor de mensajes Cata -->
+                        <div id="cupping-message" class="hidden p-4 rounded-xl items-start gap-3 mt-4">
+                            <!-- El contenido se inyecta via JS -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 mt-12 py-12 text-center">
+        <div class="max-w-3xl mx-auto px-6 space-y-8">
+            <h2 class="font-serif text-2xl tracking-widest font-bold text-gray-900 uppercase">
+                Okini
+            </h2>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-gray-500 text-sm">
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-mint-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Ciudad Base, Centro Creativo</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-mint-600"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span>Lunes a Domingo • 8:00 AM - 8:00 PM</span>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-400">
+                © <span id="year"></span> Okini Specialty Coffee. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // --- STATE VARIABLES ---
+        let slowBarCapacity = 50;
+        const SLOW_BAR_MAX = 50;
+        let cuppingCapacity = 8;
+        const CUPPING_PRICE = 25;
+
+        // --- DOM ELEMENTS: SLOW BAR ---
+        const slowBarForm = document.getElementById('slow-bar-form');
+        const slowBarMethodSelect = document.getElementById('slow-bar-method');
+        const slowBarQtySelect = document.getElementById('slow-bar-qty');
+        const slowBarTotalDisplay = document.getElementById('slow-bar-total');
+        const slowBarCountDisplay = document.getElementById('slow-bar-count');
+        const slowBarProgress = document.getElementById('slow-bar-progress');
+        const slowBarMessageContainer = document.getElementById('slow-bar-message');
+        const slowBarSubmitBtn = document.getElementById('slow-bar-submit');
+
+        // --- DOM ELEMENTS: CUPPING ---
+        const cuppingForm = document.getElementById('cupping-form');
+        const cuppingQtySelect = document.getElementById('cupping-qty');
+        const cuppingTotalDisplay = document.getElementById('cupping-total');
+        const cuppingCountDisplay = document.getElementById('cupping-count');
+        const cuppingMessageContainer = document.getElementById('cupping-message');
+        const cuppingSubmitBtn = document.getElementById('cupping-submit');
+
+        // --- HELPER FUNCTIONS ---
+        function showMessage(container, type, text) {
+            container.classList.remove('hidden', 'bg-mint-50', 'text-mint-800', 'border-mint-200', 'bg-red-50', 'text-red-800', 'border-red-200', 'bg-mint-500/20', 'text-mint-200', 'border-mint-500/30', 'bg-red-500/20', 'text-red-200', 'border-red-500/30');
+            
+            // Icons based on type
+            const successIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`;
+            const errorIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>`;
+
+            let styleClasses = [];
+            let icon = '';
+
+            // Handle Light vs Dark theme for messages depending on section
+            const isDarkSection = container.id.includes('cupping');
+
+            if (type === 'success') {
+                icon = successIcon;
+                styleClasses = isDarkSection ? ['bg-mint-500/20', 'text-mint-200', 'border', 'border-mint-500/30'] : ['bg-mint-50', 'text-mint-800', 'border', 'border-mint-200'];
+            } else {
+                icon = errorIcon;
+                styleClasses = isDarkSection ? ['bg-red-500/20', 'text-red-200', 'border', 'border-red-500/30'] : ['bg-red-50', 'text-red-800', 'border', 'border-red-200'];
+            }
+
+            container.classList.add('flex', 'fade-in', ...styleClasses);
+            container.innerHTML = `${icon} <p class="text-sm">${text}</p>`;
+
+            // Hide after 4 seconds
+            setTimeout(() => {
+                container.classList.add('hidden');
+                container.classList.remove('flex');
+            }, 4000);
+        }
+
+        // --- EVENT LISTENERS: SLOW BAR ---
+        
+        // Update total price dynamically
+        function updateSlowBarTotal() {
+            const price = parseInt(slowBarMethodSelect.options[slowBarMethodSelect.selectedIndex].dataset.price);
+            const qty = parseInt(slowBarQtySelect.value);
+            slowBarTotalDisplay.textContent = `$${price * qty}`;
+        }
+
+        slowBarMethodSelect.addEventListener('change', updateSlowBarTotal);
+        slowBarQtySelect.addEventListener('change', updateSlowBarTotal);
+
+        // Handle Slow Bar Submission
+        slowBarForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const qty = parseInt(slowBarQtySelect.value);
+            const method = slowBarMethodSelect.value;
+
+            if (slowBarCapacity === 0) {
+                showMessage(slowBarMessageContainer, 'error', 'Lo sentimos, hemos agotado nuestra capacidad de Slow Bar por hoy.');
+                return;
+            }
+
+            if (qty > slowBarCapacity) {
+                showMessage(slowBarMessageContainer, 'error', `Solo nos quedan ${slowBarCapacity} tazas disponibles hoy.`);
+                return;
+            }
+
+            // Success: update state
+            slowBarCapacity -= qty;
+            
+            // Update UI
+            slowBarCountDisplay.textContent = slowBarCapacity;
+            slowBarProgress.style.width = `${(slowBarCapacity / SLOW_BAR_MAX) * 100}%`;
+            
+            // If empty, disable form
+            if (slowBarCapacity === 0) {
+                slowBarSubmitBtn.disabled = true;
+                slowBarSubmitBtn.textContent = 'Agotado por hoy';
+                slowBarMethodSelect.disabled = true;
+                slowBarQtySelect.disabled = true;
+            } else if (slowBarCapacity === 1) {
+                // Remove the option for 2 cups if only 1 is left
+                if(slowBarQtySelect.options.length > 1) {
+                    slowBarQtySelect.remove(1);
+                }
+            }
+
+            showMessage(slowBarMessageContainer, 'success', `¡Reserva confirmada! ${qty}x ${method} te espera(n) en la barra.`);
+            
+            // Reset selects
+            slowBarQtySelect.value = "1";
+            updateSlowBarTotal();
+        });
+
+        // --- EVENT LISTENERS: CUPPING ---
+
+        // Update total price dynamically
+        function updateCuppingTotal() {
+            const qty = parseInt(cuppingQtySelect.value);
+            cuppingTotalDisplay.textContent = `$${CUPPING_PRICE * qty}`;
+        }
+
+        cuppingQtySelect.addEventListener('change', updateCuppingTotal);
+
+        // Handle Cupping Submission
+        cuppingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const qty = parseInt(cuppingQtySelect.value);
+
+            if (cuppingCapacity === 0) {
+                showMessage(cuppingMessageContainer, 'error', 'La cata de esta semana está completamente llena.');
+                return;
+            }
+
+            if (qty > cuppingCapacity) {
+                showMessage(cuppingMessageContainer, 'error', `Solo quedan ${cuppingCapacity} lugares disponibles.`);
+                return;
+            }
+
+            // Success: update state
+            cuppingCapacity -= qty;
+            
+            // Update UI
+            cuppingCountDisplay.textContent = cuppingCapacity;
+            
+            // Update select options based on remaining capacity
+            cuppingQtySelect.innerHTML = ''; // Clear options
+            if (cuppingCapacity > 0) {
+                for (let i = 1; i <= cuppingCapacity; i++) {
+                    const option = document.createElement('option');
+                    option.value = i;
+                    option.textContent = i === 1 ? '1 Persona' : `${i} Personas`;
+                    option.className = 'text-gray-900';
+                    cuppingQtySelect.appendChild(option);
+                }
+            } else {
+                const option = document.createElement('option');
+                option.textContent = 'Agotado';
+                cuppingQtySelect.appendChild(option);
+                cuppingQtySelect.disabled = true;
+                cuppingSubmitBtn.disabled = true;
+                cuppingSubmitBtn.textContent = 'Cata Llena';
+                cuppingSubmitBtn.classList.remove('hover:bg-mint-400');
+            }
+
+            showMessage(cuppingMessageContainer, 'success', `¡Reserva confirmada! Has asegurado ${qty} lugar(es) para la cata.`);
+            
+            updateCuppingTotal();
+        });
+
+    </script>
+</body>
+</html>
